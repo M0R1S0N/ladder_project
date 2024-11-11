@@ -441,6 +441,18 @@ a:hover {
     }
     
 }
+@media (max-width: 1080px) {
+    .welcome__img {
+        margin-right: 0;
+        height: 300px;
+        width: 300px;
+    }
+
+    .welcome .container {
+        gap: 40px;
+    }
+}
+    
 
 @media (max-width: 1060px) {
     .welocme__title {
@@ -573,7 +585,6 @@ a:hover {
     @keyframes burgerAnimation {
         from {opacity: 0;}
         to {opacity: 1;}
-        
     }
 
     .welcome__img {
