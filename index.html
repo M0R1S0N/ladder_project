@@ -9,9 +9,7 @@
     <script src="https://kit.fontawesome.com/bfec730d56.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="arrow-up">
-        <a href="#"><i class="fas fa-arrow-up"></i></a>
-    </div>
+    
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -39,12 +37,11 @@
                     <p class="welcome__text">Я занимаюсь проектными продажами, создаю проекты и сопровождаю клиента на всех этапах ремонта</p>
                     <a class="btn welcome__btn" href="mailto:dmitriy.ryazantsev1@lemanapro.ru">dmitriy.ryazantsev1@lemanapro.ru</a>
                 </div>
-
                 <img src="images/me.jpg" alt="it's me" class="welcome__img">
             </div>
         </section>
 
-        <section class="works">
+        <section id="works" class="works">
             <div class="container">
                 <a href="#works__wrapper" class="works__btn" type="button">
                     <!-- <img class="works__icon" src="images/arrow.svg" alt=""> -->
@@ -143,5 +140,31 @@
         })
     </script>
 
+    <script>
+                document.addEventListener("DOMContentLoaded", function () {
+    const worksSection = document.getElementById("works");
+    const arrowUp = document.getElementById("arrow-up");
+
+    // Начально скрываем стрелку
+    arrowUp.style.opacity = "0";
+
+    document.addEventListener("scroll", function () {
+        const rect = worksSection.getBoundingClientRect();
+
+        // Показываем стрелку, если мы ниже начала секции "Works"
+        if (rect.top <= window.innerHeight && rect.top <= 0) {
+            arrowUp.style.opacity = "40%"; // Делаем стрелку видимой
+        } else {
+            arrowUp.style.opacity = "0"; // Скрываем стрелку
+        }
+    });
+});
+
+
+
+    </script>
+<div id="arrow-up" class="arrow-up">
+    <a href="#"><i class="fas fa-arrow-up"></i></a>
+</div>
 </body>
 </html>

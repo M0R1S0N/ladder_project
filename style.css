@@ -371,11 +371,13 @@ a:hover {
 /*--------------
      ARROW TO TOP
 ----------------*/
-.arrow-up {
+#arrow-up {
+    display: block;
     position: fixed;
     bottom: 30px;
-    left: 30px;
+    left: 10px;
     z-index: 100;
+    opacity: 40%;
 }
 
 .arrow-up a {
