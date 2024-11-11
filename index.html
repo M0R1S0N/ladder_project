@@ -19,6 +19,9 @@
                 <a href="#works__wrapper" class="header__link">Проекты</a>
                 <a href="#contact" class="header__link">Контакты</a>
             </nav>
+            <div class="burger">
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -93,9 +96,9 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="title contact__title">Contact Me</h2>
+                <h2 class="title contact__title">Контакты</h2>
                 <p class="contact__text">
-                    If you are looking to hire a product designer, I’m currently available for freelance work
+                    Если вы нашли мои проекты привлекательными, то спешите написать на почту ниже
                 </p>
                 <a class="btn contact__btn" href="mailto:dmitriy.ryazantsev1@lemanapro.ru">dmitriy.ryazantsev1@lemanapro.ru</a>
             </div>
@@ -130,6 +133,11 @@
 
 
 
-
+    <script>
+        document.querySelector('.burger').addEventListener('click', function(){
+            this.classList.toggle('active');
+            document.querySelector('.header__nav').classList.toggle('open');
+        })
+    </script>
 </body>
 </html>
