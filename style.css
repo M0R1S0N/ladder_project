@@ -378,6 +378,8 @@ a:hover {
     left: 10px;
     z-index: 100;
     opacity: 40%;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .arrow-up a {
