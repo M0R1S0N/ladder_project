@@ -164,6 +164,64 @@
 
 
     </script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.header__nav');
+    const body = document.body;
+
+    // Обработчик клика по бургеру
+    burger.addEventListener('click', () => {
+        const isMenuOpen = body.classList.toggle('menu-open'); // Переключаем класс menu-open
+        if (isMenuOpen) {
+            body.classList.add('no-scroll'); // Блокируем прокрутку
+        } else {
+            body.classList.remove('no-scroll'); // Разблокируем прокрутку
+        }
+    });
+});
+
+    </script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.header__nav');
+    const body = document.body;
+    const menuLinks = document.querySelectorAll('.header__nav a'); // Находим все ссылки в меню
+
+    // Обработчик клика по бургеру
+    burger.addEventListener('click', () => {
+        const isMenuOpen = body.classList.toggle('menu-open'); // Переключаем класс menu-open
+        nav.classList.toggle('open', isMenuOpen); // Переключаем видимость меню
+        burger.classList.toggle('active', isMenuOpen); // Переключаем класс active на значке бургера
+        if (isMenuOpen) {
+            body.classList.add('no-scroll'); // Блокируем прокрутку
+        } else {
+            body.classList.remove('no-scroll'); // Разблокируем прокрутку
+        }
+    });
+
+    // Обработчик клика по ссылкам в меню
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Закрываем меню, разблокируем прокрутку и сбрасываем значок бургера
+            body.classList.remove('menu-open');
+            body.classList.remove('no-scroll');
+            nav.classList.remove('open'); // Скрываем меню
+            burger.classList.remove('active'); // Сбрасываем значок бургера
+        });
+    });
+});
+
+
+    </script>
+
+
+
+
+
 <div id="arrow-up" class="arrow-up">
     <a href="#"><i class="fas fa-arrow-up"></i></a>
 </div>
