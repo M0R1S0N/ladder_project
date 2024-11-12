@@ -31,27 +31,6 @@ body {
     background-color: #202020;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.5;
-    color: #DEDEDE;
-}
-
-p {
-    margin: 0;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    color: #DEDEDE;
-    opacity: 0.7;
-}
-
 a{
     color: #DEDEDE;
     text-decoration: none;
@@ -77,35 +56,108 @@ a:hover {
     gap: 10px
 }
 
+.title {
+    margin-top: 0;
+    font-size: 36px;
+    text-align: center;
+    color: #DEDEDE;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 48px;
+
+    font-size: 18px;
+    color: #FFFFFF;
+
+    background: #9D9D9D;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+
+    background-image: url(images/mail.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.works__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 80px;
+
+    font-family: 'Manrope';
+    font-size: 16px;
+
+    color: #DEDEDE;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+
+}
+
+.works__btn:hover {
+    opacity: 0.5;
+}
+
+.works__btn::before {
+    content: "";
+    width: 16px;
+    height: 33px;
+
+    background-image: url(images/arrow.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.socials {
+    display: flex;
+    gap: 40px;
+}
+
+.open {
+    display: flex !important;
+}
 
 
 /*--------------
     HEADER
 ----------------*/
 
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
 
+
+
+.header {
     padding: 20px 0;
+
+
     background: rgba(50, 50, 50, 0.7);
     backdrop-filter: blur(10px);
-    z-index: 10;
 }
-
-
 
 .header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo {
-    font-weight: 800;
-}
+
 
 .header__nav {
     display: flex;
@@ -114,116 +166,434 @@ a:hover {
 
 .header__link {
     font-weight: 700;
+    font-size: 18px;
 }
 
-
-
 /*--------------
-    HERO-IMAGE
+     MAIN
 ----------------*/
 
 
-.hero-image {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 /*--------------
-    COVIBE
+     WELCOME
 ----------------*/
 
-
-.covibe {
-    margin-top: 130px;
-
-
+.welcome {
+    margin-top: 160px;
 }
 
-.covibe__desc {
-    max-width: 350px;
-    margin-bottom: 110px;
-}
-
-.covibe__text {
-    padding-bottom: 10px;
-
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    color: #DEDEDE;
-    opacity: 0.7;
-}
-
-.covibe__title {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.5;
-    color: #DEDEDE;
-}
-
-.covibe__static {
+.welcome .container {
     display: flex;
     justify-content: space-between;
-
-    margin-bottom: 290px;
+    align-items: center;
 }
 
-.covibe__static h3 {
-    font-weight: 700;
-    font-size: 20px;
 
+.welocme__title {
+    width: 700px;
+    margin-right: 24px;
+    margin-top: 0;
+
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.19;
     color: #DEDEDE;
 }
 
-
-
-/*--------------
-    LAUNCH
-----------------*/
-
-
-.launch {
-    margin-top: 100px;
+.welcome__text {
+    width: 395px;
+    margin-bottom: 88px;
 }
 
-.launch-image {
-    padding-top: 100px;
-    padding-bottom: 230px;
-}
 
-.launch__solution img {
-    width: 500px;
-    height: 760px;
+.welcome__img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-right: 80px;
+
     object-fit: cover;
     object-position: center;
 }
 
-.launch-solution {
+
+/*--------------
+     WORKS
+----------------*/
+
+.works {
+    margin-top: 145px;
+}
+
+
+.works__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    padding-top: 140px;
+}
+
+.work {
+    height: 888px;
+    /* height: 700px; */
+    position: relative;
+}
+
+.work:nth-child(odd) {
+    margin-top: -140px;
+}
+
+.work:hover {
+    opacity: 1;
+}
+
+.work__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.work__name {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
     display: flex;
+    justify-content: center;
     align-items: center;
+
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+
+    background-color: rgba(0,0,0, 0.6);
+    transition: opacity 0.3s;
+}
+
+.work:hover .work__name {
+    opacity: 1;
+}
+
+
+/*--------------
+     PROJECTS
+----------------*/
+
+.projects {
+    margin-top: 200px;
+}
+
+
+.projects__title {  
+    margin-top: 0;
+    margin-bottom: 65px;
+}
+
+.projects__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects__img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.projects--vertical .projects__img {
+    height: 560px;
+}
+
+/*--------------
+     CONTACT
+----------------*/
+
+
+.contact {
+    margin-top: 200px;
+    margin-bottom: 120px;
+}
+
+.contact .container {
+    max-width: 520px;
+    text-align: center;
+}
+
+.contact__title {
+    margin-bottom: 24px;
+}
+
+.contact__text {
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+
+
+
+/*--------------
+     FOOTER
+----------------*/
+
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #696969;
+}
+
+.footer .container {
+    display: flex;
     justify-content: space-between;
-    padding-bottom: 280px;
-    gap: 130px;
+    align-items: baseline;
 }
 
-.launch-solution_2 {
-    flex-direction: row-reverse;
+.footer__copy {
+    font-size: 16px; 
+    margin: 0;
 }
 
-.launch-solution_2 img {
-    padding-right: 0;
+.footer__copy span {
+    color: #ECECEC;
 }
 
-.launch__solution-desc p {
-    padding-bottom: 12px;
+
+.social__img {
+    display: flex;
 }
 
+/*--------------
+     ARROW TO TOP
+----------------*/
+#arrow-up {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    z-index: 100;
+    opacity: 40%;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-up a {
+    width: 50px;
+    height: 50px;
+    background: black;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    border-radius: 50%;
+    color: white;
+}
+
+.arrow-up a:hover {
+    background: #303030;
+    transition: .5s;
+}
+
+
+/*--------------
+     BURGER
+----------------*/
+
+.burger {
+    display: none;
+}
+
+
+
+@media (max-width: 1150px) {
+    .welcome {
+        margin-top: 70px;
+    }
+
+    .welcome__img {
+        margin-right: 0;
+    }
+
+    .welcome .container {
+        flex-direction: column-reverse;
+        gap: 65px;
+    }
+
+    .welocme__title {
+        width: auto;
+    }
+
+    .welcome__text {
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    .welcome__desc {
+        text-align: center;
+    }
+
+    .work {
+        height: 600px;
+    }
+    
+}
+@media (max-width: 1080px) {
+    .welcome__img {
+        margin-right: 0;
+        height: 300px;
+        width: 300px;
+    }
+
+    .welcome .container {
+        gap: 40px;
+    }
+}
+    
+
+@media (max-width: 1060px) {
+    .welocme__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 950px) {
+    .work__name {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 850px) {
+    .projects__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .works, .projects, .contact {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .projects__img {
+        width: 100%;
+        height: 360px;
+    }
+
+    .works__wrapper {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .work:nth-child(odd) {
+        margin-top: 0;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 40px;
+    
+        font-size: 18px;
+        color: #FFFFFF;
+    
+        background: #9D9D9D;
+        border-radius: 4px;
+    }
+    
+
+
+    .burger {
+        display: flex;
+        position: relative;
+        z-index: 50;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30px;
+        height: 18px;
+    }
+    
+    .burger span {
+        height: 2px;
+        width: 80%;
+        transform: scale(1);
+        background-color: #FAF6F2;
+    }
+    
+    .burger::before, .burger::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #FAF6F2;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .burger::before {top: 0}
+    
+    .burger::after {bottom: 0}
+    
+    .burger.active span {
+        transform: scale(0)
+    }
+    
+    .burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+    
+    .burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+    
+    .burger {
+        display: flex;
+    }
+
+    .header__nav {
+        display: none;
+        flex-direction:row;
+        position: fixed;
+        height: 25%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .header__nav a {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    @keyframes burgerAnimation {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .welcome__img {
+        margin-right: 0;
+        height: 300px;
+        width: 300px;
+    }
+
+    .welcome .container {
+        gap: 40px;
+    }
+}
